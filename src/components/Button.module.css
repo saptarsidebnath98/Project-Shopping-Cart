@@ -10,6 +10,7 @@
     font-size: 21px;
     border-radius: 10px;
     border: none;
+    user-select: none;
 }
 
 .primary {

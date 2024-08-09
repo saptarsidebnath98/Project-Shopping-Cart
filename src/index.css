@@ -130,11 +130,11 @@ body{
     gap: 30px;
 }
 .header-img-items{
-    width: 15vh;
+    width: 10vw;
+    height: 10vw;
     background-color: #303841;
     border: 2px solid #be3144;
     flex-wrap: wrap;
-    height: 15vh;
     padding: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -177,6 +177,7 @@ ul{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding-left: 0%;
 }
 .footer-links{
     text-decoration: none;
@@ -188,7 +189,17 @@ ul{
 .github-logo{
     margin-right: 5px;
 }
-
+/* sale-section */
+.sale-section{
+    display: block;
+}
+.sale-container{
+    display: flex;
+    justify-content: center;
+}
+.sale-img{
+    width: 200px;
+}
 
 @media (max-width: 600px){
     /* navbar */
@@ -234,8 +245,8 @@ ul{
         justify-content: center;
     }
     .header-img-items{
-        width: 20vh;
-        height: 20vh;
+        width: 100px;
+        height: 100px;
     }
     .category-text{
         font-size: 1rem;
