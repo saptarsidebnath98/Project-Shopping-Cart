@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.btn {
+    padding: 10px 20px;
+    font-family: "Bebas Neue", sans-serif;
+    /* word-spacing: 10px; */
+    letter-spacing: 5px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 21px;
+    border-radius: 10px;
+    border: none;
+}
+
+.primary {
+    composes: btn;
+    background-color: #d3d6db;
+    color: #be3144;
+    font-size: 1.5rem;
+   
+}
+.primary:hover{
+    background-color: #be3144;
+    color: #d3d6db;
+}
