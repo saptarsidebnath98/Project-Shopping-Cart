@@ -1,5 +1,6 @@
 import useFetchData from "../Custom hook/useFetchData";
 import LinkButton from "../LinkButton";
+import Card from "./Card";
 
 const ShoppingPage = () => {
   const url = "https://fakestoreapi.com/products";
@@ -15,11 +16,14 @@ const ShoppingPage = () => {
     <div className="container shopping-container">
       <div className="back-cart-div">
         <LinkButton path="/home" label="back" type="smaller"/>
-          <div className="cart-div">
+          <button className="cartBtn-div">
           <i className="fa-solid fa-cart-shopping"></i>
           <p>0</p>
-          </div>
-        
+          </button>
+      </div>
+      <div className="shopping-cards-container">
+        {data.map((item)=> 
+        <Card key={item.id} id={item.id} image={item.image} title={item.title} category={item.category} rate={item.rate} price={item.price}/>)}
       </div>
     </div>
     </section>

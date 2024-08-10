@@ -273,12 +273,29 @@ ul{
     justify-content: space-between;
     align-items: center;
 }
-.cart-div{
+.cartBtn-div{
     display: flex;
     gap: 10px;
     color: #be3144;
     font-family: "Bebas Neue", sans-serif;
     align-items: center;
+}
+
+.shopping-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card */
+.card{
+    width: 100px;
+    font-size: 18px;
+}
+.card-img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 @media (max-width: 600px){
