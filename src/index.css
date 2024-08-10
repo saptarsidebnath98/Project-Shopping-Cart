@@ -90,13 +90,14 @@ ul{
 .header-img{
     width: 15%;
     border-radius: 10px;
-    border: 2px solid #be3144;
+    border: 5px solid #be3144;
     border-radius: 50%;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 2);
     margin-bottom: 20px;
+    transition: box-shadow 0.25s ease-in;
 }
 .header-img:hover{
-    box-shadow: 0px 0px 50px #be3144;
+    box-shadow: 0px 0px 70px #be3144;
 }
 .header-first{
     color: #d3d6db;
