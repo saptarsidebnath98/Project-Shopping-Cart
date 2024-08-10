@@ -25,3 +25,11 @@
     background-color: #be3144;
     color: #d3d6db;
 }
+
+.smaller{
+    composes: primary;
+    font-size: 18px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 2px;
+}

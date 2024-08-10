@@ -264,6 +264,23 @@ ul{
     color: #d3d6db;
 }
 
+/* shopping-page */
+.shopping{
+    padding: 20px 0px;
+}
+.back-cart-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-div{
+    display: flex;
+    gap: 10px;
+    color: #be3144;
+    font-family: "Bebas Neue", sans-serif;
+    align-items: center;
+}
+
 @media (max-width: 600px){
     /* navbar */
     .navbar{
