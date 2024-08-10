@@ -1,10 +1,10 @@
-import Button from "./Button";
+import LinkButton from "./LinkButton";
 
 const SectionButton = () => {
   return (
     <section className="container">
         <div className="shop-now-btn-section">
-            <Button label="Shop Now"/>
+            <LinkButton path="/Project-Shopping-Cart/shopping" label="Shop Now"/>
         </div>
     </section>
   )

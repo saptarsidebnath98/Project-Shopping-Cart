@@ -1,9 +1,9 @@
-import Button from "../Button";
+import LinkButton from "../LinkButton";
 
 const ShoppingPage = () => {
   return (
     <div>
-        <Button label="Back" action={()=> history.back()}/>
+        <LinkButton path="/Project-Shopping-Cart/home" label="back"/>
       <h1>Welcome to shopping Page</h1>
     </div>
   )

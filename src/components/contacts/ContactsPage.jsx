@@ -1,9 +1,9 @@
-import Button from "../Button"
+import LinkButton from "../LinkButton";
 
 const Contacts = () => {
   return (
     <div>
-      <Button label="Back" action={()=> history.back()}/>   
+      <LinkButton path="/Project-Shopping-Cart/home" label="back"/>  
       <h1>Contacts Page</h1>
     </div>
   )

@@ -5,7 +5,7 @@ import App from './App.jsx'
 import Contacts from './components/contacts/ContactsPage.jsx'
 import ShoppingPage from './components/shopping/ShoppingPage.jsx'
 import Home from './components/HomePage.jsx'
-import ErrorPage from './components/ErrorPage.jsx'
+import ErrorPage from './components/error/ErrorPage.jsx'
 import './index.css'
 
 const router = createBrowserRouter([

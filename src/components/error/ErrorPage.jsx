@@ -1,5 +1,5 @@
-import { Link, useRouteError } from "react-router-dom";
-import Button from "./Button";
+import { useRouteError } from "react-router-dom";
+import LinkButton from "../LinkButton";
 
 const ErrorPage = () => {
     const {status, statusText, data} = useRouteError();
@@ -10,9 +10,7 @@ const ErrorPage = () => {
             <h1>{status}</h1>
             <h3>{statusText}</h3>
             <p>{data}</p>
-            <Link to="/Project-Shopping-Cart/home">
-                <Button label="Go Home"/>
-            </Link>
+            <LinkButton path="/Project-Shopping-Cart/home" label="Go Home"/>
         </div>
     </div>
   )
