@@ -4,13 +4,15 @@ import {  createBrowserRouter, RouterProvider,} from "react-router-dom"
 import App from './App.jsx'
 import Contacts from './components/contacts/ContactsPage.jsx'
 import ShoppingPage from './components/shopping/ShoppingPage.jsx'
-import Home from './components/Home.jsx'
+import Home from './components/HomePage.jsx'
+import ErrorPage from './components/ErrorPage.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
   {
     path: "/Project-Shopping-Cart/",
     element: <App />,
+    errorElement: <ErrorPage/>,
     children:[
       { index: true, element: <Home /> },
       {
