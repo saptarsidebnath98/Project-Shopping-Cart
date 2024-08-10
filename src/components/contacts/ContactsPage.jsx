@@ -2,7 +2,7 @@ import LinkButton from "../LinkButton";
 
 const Contacts = () => {
   return (
-    <section className="Contacts">
+    <section className="contacts">
     <div className="container contacts-container">
       <h1>Contact Point</h1>
       <ul className="contact-list">
