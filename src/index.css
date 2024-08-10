@@ -239,6 +239,7 @@ ul{
 }
 .contacts-container>h1{
     color: #be3144;
+    font-size: 2.5rem;
 }
 
 .contact-list{
@@ -249,8 +250,9 @@ ul{
     display: flex;
     gap: 10px;
 }
-.contact-items>i{
+.contact-items>span>i{
     color: #be3144;
+    margin-right: 10px;
 }
 .contact-points{
     color: #be3144;
@@ -322,6 +324,7 @@ ul{
     .contacts-container{
         text-align: center;
         gap: 20px;
+        font-size: 0.75rem;
     }
     .contacts-container>h1{
         font-size: 2rem;
@@ -331,5 +334,8 @@ ul{
     }
     .contact-items{
         flex-direction: column;
+    }
+    .contact-items + .contact-items{
+        margin-top: 20px;
     }
 }

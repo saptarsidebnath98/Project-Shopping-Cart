@@ -8,14 +8,18 @@ const Contacts = () => {
       <ul className="contact-list">
 
         <li className="contact-items">
+          
+          <span className="contact-points">
           <i className="fa-solid fa-mobile-screen-button"></i>
-          <span className="contact-points">Mobile: </span>
+            Mobile: </span>
            +91 8918221707
         </li>
 
         <li className="contact-items">
-        <i className="fa-regular fa-envelope"></i>
-          <span className="contact-points">Email: </span>
+        
+          <span className="contact-points">
+            <i className="fa-regular fa-envelope"></i>
+            Email: </span>
            <a 
            target="_blank"
            rel="noopener noreferrer"
@@ -23,8 +27,9 @@ const Contacts = () => {
         </li>
 
         <li className="contact-items">
-        <i className="fa-brands fa-linkedin"></i>
-          <span className="contact-points">Linkedin: </span>
+          <span className="contact-points">
+          <i className="fa-brands fa-linkedin"></i>
+            Linkedin: </span>
            <a className="contact-links" 
            target="_blank"
            rel="noopener noreferrer"
