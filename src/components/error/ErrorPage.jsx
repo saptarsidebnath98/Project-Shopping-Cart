@@ -10,7 +10,7 @@ const ErrorPage = () => {
             <h1>{status}</h1>
             <h3>{statusText}</h3>
             <p>{data}</p>
-            <LinkButton path="/Project-Shopping-Cart/home" label="Go Home"/>
+            <LinkButton path="/home" label="Go Home"/>
         </div>
     </div>
   )

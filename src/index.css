@@ -15,6 +15,10 @@ body{
     width: 80%;
     margin: 0 auto;
 }
+
+ul{
+    padding-left: 0%;
+}
 /* Navbar */
 .navbar{
     background-color: #be3144;

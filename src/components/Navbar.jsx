@@ -10,9 +10,9 @@ const Navbar = () => {
             </div>
             <div>
                 <ul className="nav-list">
-                    <li className="nav-items"><Link className="nav-links" to="/Project-Shopping-Cart/home">Home</Link></li>
-                    <li className="nav-items"><Link className="nav-links" to="/Project-Shopping-Cart/shopping">Shop Now</Link></li>
-                    <li className="nav-items"><Link className="nav-links" to="/Project-Shopping-Cart/contacts">Contact</Link></li>
+                    <li className="nav-items"><Link className="nav-links" to="/home">Home</Link></li>
+                    <li className="nav-items"><Link className="nav-links" to="/shopping">Shop Now</Link></li>
+                    <li className="nav-items"><Link className="nav-links" to="/contacts">Contact</Link></li>
                 </ul>
             </div>
         </div>

@@ -4,7 +4,7 @@ const SectionButton = () => {
   return (
     <section className="container">
         <div className="shop-now-btn-section">
-            <LinkButton path="/Project-Shopping-Cart/shopping" label="Shop Now"/>
+            <LinkButton path="/shopping" label="Shop Now"/>
         </div>
     </section>
   )

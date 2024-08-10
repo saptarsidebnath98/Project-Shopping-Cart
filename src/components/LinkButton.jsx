@@ -10,7 +10,7 @@ const LinkButton = ({ path, label, type, action }) => {
   )
 }
 
-LinkButton.PropTypes = {
+LinkButton.propTypes = {
     path: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     type: PropTypes.string,
