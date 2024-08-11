@@ -266,9 +266,10 @@ ul{
 
 /* shopping-page */
 .shopping{
-    padding: 20px 0px;
+    padding: 20px 0px 100px;
 }
 .shopping-container{
+    gap: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,32 +291,58 @@ ul{
 .shopping-cards-container{ 
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
-    gap: 20px   ;
+    row-gap: 50px;
+    column-gap: 35px;
 }
 
 /* Card */
 .card{
     max-width: 300px;
-    height: 500px;
-    font-size: 18px;
-    background-color: #303841;
-    border: 2px solid #be3144;
+    max-height: 550px;
+    background-color: #be3144;
+    border-radius: 5px;
 }
 .card-img-div{
     width: 100%;
-    height: 50%;
+    height: 40%;
     background-color: #fff;
     overflow: hidden;  
+    border-radius: 5px 5px 0px 0px;
 }
 .card-img{
     width: 100%;
     overflow: hidden;   
 }
 .card-details-div{
-    height: 50%;
-    background-color: #3a4750;
+    height: 60%;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #d3d6db;
+}
+.card-details-title{
+    font-size: 0.8rem;
+    color: #d3d6db;
+    line-height: 1.5rem;
+}
+.card-points{
+    color: #303841;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card-price{
+    font-size: 1.5rem;
 }
 
 @media (max-width: 600px){

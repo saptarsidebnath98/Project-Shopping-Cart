@@ -11,6 +11,7 @@
     border-radius: 10px;
     border: none;
     user-select: none;
+    cursor: pointer;
 }
 
 .primary {
@@ -33,3 +34,16 @@
     text-align: center;
     border-radius: 2px;
 }
+
+.round-smaller{
+    composes: btn;
+    font-size: 1rem;
+    background-color: #3a4750;
+    color: #d3d6db;
+    border-radius: 5px;
+}
+.round-smaller:active{
+    background-color: #d3d6db;
+    color: #3a4750;
+}
+

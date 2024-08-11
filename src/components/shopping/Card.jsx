@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Button from '../Button';
 
 const Card = ({id, image, title, category, rate, price}) => {
   return (
@@ -7,11 +8,15 @@ const Card = ({id, image, title, category, rate, price}) => {
         <img className="card-img" src={image} alt={id} />
       </div>
       <div className='card-details-div'>
-        <h3>{title}</h3>
+        <h3 className='card-details-title'>{title}</h3>
         <p><span className="card-points">Category: </span>{category}</p>
         <p><span className="card-points">Rating: </span>{rate}/5</p>
-        <h4>{price}</h4>
+        <h4 className='card-price'>${price}</h4>
+        <div className='card-buttons'>
+        <Button type='round-smaller' label='Add to Cart'/>
+        </div>
       </div>
+      
     </div>
   )
 }
