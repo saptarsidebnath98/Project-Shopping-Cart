@@ -23,7 +23,7 @@ const ShoppingPage = () => {
       </div>
       <div className="shopping-cards-container">
         {data.map((item)=> 
-        <Card key={item.id} id={item.id} image={item.image} title={item.title} category={item.category} rate={item.rate} price={item.price}/>)}
+        <Card key={item.id} id={item.id} image={item.image} title={item.title} category={item.category} rate={item.rating.rate} price={item.price}/>)}
       </div>
     </div>
     </section>

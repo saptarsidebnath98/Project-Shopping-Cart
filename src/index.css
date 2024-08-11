@@ -268,7 +268,13 @@ ul{
 .shopping{
     padding: 20px 0px;
 }
+.shopping-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .back-cart-div{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -281,24 +287,42 @@ ul{
     align-items: center;
 }
 
-.shopping-cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.shopping-cards-container{ 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 20px   ;
 }
 
 /* Card */
 .card{
-    width: 100px;
+    max-width: 300px;
+    height: 500px;
     font-size: 18px;
+    background-color: #303841;
+    border: 2px solid #be3144;
+}
+.card-img-div{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    overflow: hidden;  
 }
 .card-img{
     width: 100%;
-    object-fit: cover;
-    overflow: hidden;
+    overflow: hidden;   
+}
+.card-details-div{
+    height: 50%;
+    background-color: #3a4750;
 }
 
 @media (max-width: 600px){
+    /* .container{
+        width: 95%;
+        margin: 0 auto;
+    } */
     /* navbar */
     .navbar{
         padding: 10px 0px;
