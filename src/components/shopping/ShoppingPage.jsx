@@ -1,6 +1,7 @@
 import useFetchData from "../Custom hook/useFetchData";
 import LinkButton from "../LinkButton";
 import Card from "./Card";
+import ShimmerShoppingPage from "../shimmer effect/ShimmerShoppingPage";
 
 const ShoppingPage = () => {
   const url = "https://fakestoreapi.com/products";
@@ -8,7 +9,7 @@ const ShoppingPage = () => {
 
   console.log(data? data[0] : "no data");
 
-  if(loading) return <div>Loading...</div>
+  if(loading) return <ShimmerShoppingPage/>
   if(error) return <div>{error}</div>
 
   return (
