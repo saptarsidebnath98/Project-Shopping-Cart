@@ -6,6 +6,8 @@ import Contacts from './components/contacts/ContactsPage.jsx'
 import ShoppingPage from './components/shopping/ShoppingPage.jsx'
 import Home from './components/HomePage.jsx'
 import ErrorPage from './components/error/ErrorPage.jsx'
+import CartContextProvider from './components/context/CartContext.jsx'
+import CartPage from './components/shopping/CartPage.jsx'
 import './index.css'
 
 const router = createHashRouter([
@@ -27,12 +29,18 @@ const router = createHashRouter([
         path: "/shopping",
         element: <ShoppingPage/>,
       },
+      {
+        path: "/cart",
+        element: <CartPage/>,
+      },
     ]
   }
 ]);
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
+  <CartContextProvider>
     <RouterProvider router={router} />
+  </CartContextProvider>
   // </StrictMode>,
 )

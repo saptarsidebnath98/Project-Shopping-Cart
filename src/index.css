@@ -345,6 +345,26 @@ ul{
     font-size: 1.5rem;
 }
 
+/* Cart-Page */
+.cart-page-items{
+    /* height: 200px; */
+    overflow: hidden;
+    display: flex;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px; */
+}
+.cart-page-img{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+}
+.cart-page-img>img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
 /* shimmer-effects */
 /* shimmer-shopping-page */
 .shimmer-shopping{
