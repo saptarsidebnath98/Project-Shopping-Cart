@@ -9,7 +9,7 @@ export default function CartContextProvider ({children}){
     const [totalAmount, setTotalAmount] = useState(0);
 
     function handleAddItems (item) {
-        setTotalItems((prevItems)=> [...prevItems, item])
+        setTotalItems((prevItems)=> [...prevItems, {...item, quantity: 1}])
         console.log(totalItems);
     }
 

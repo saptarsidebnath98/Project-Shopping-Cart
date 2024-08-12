@@ -19,6 +19,10 @@ body{
 ul{
     padding-left: 0%;
 }
+
+a{
+    text-decoration: none;
+}
 /* Navbar */
 .navbar{
     background-color: #be3144;

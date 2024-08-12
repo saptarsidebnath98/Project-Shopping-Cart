@@ -13,8 +13,11 @@ const CartPage = () => {
                 <img src={item.image} alt={item.title} />
             </div>
             <div className="cart-page-items-infos">
-                <span>{item.title}</span> 
+                <span>{item.title.length>20 ? item.title.slice(0, 20)+ "..." : item.title}</span> 
                 <span>{item.price}</span>
+                <button>-</button>
+                <span>{item.quantity}</span>
+                <button>+</button>
             </div>
         </div>)}
       Total = {cart.totalAmount}
