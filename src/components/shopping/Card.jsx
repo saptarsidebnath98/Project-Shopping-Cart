@@ -13,7 +13,7 @@ const Card = ({id, image, title, category, rate, price}) => {
         <p><span className="card-points">Rating: </span>{rate}/5</p>
         <h4 className='card-price'>${price}</h4>
         <div className='card-buttons'>
-        <Button type='round-smaller' label='Add to Cart'/>
+        <Button type='round-smaller' label='Add to Cart' />
         </div>
       </div>
       
