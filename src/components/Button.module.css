@@ -35,6 +35,17 @@
     border-radius: 2px;
 }
 
+.pay-smaller{
+    composes: smaller;
+    background-color: #be3144;
+    color: #d3d6db;
+}
+
+.pay-smaller:hover{
+    color: #be3144;
+    background-color: #d3d6db;
+}
+
 .round-smaller{
     composes: btn;
     font-size: 1rem;

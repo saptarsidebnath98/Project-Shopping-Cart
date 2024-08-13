@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { cartContext } from '../context/CartContext'
 import LinkButton from '../LinkButton';
 import { Link } from 'react-router-dom';
+import Button from '../Button';
 
 const CartPage = () => {
 
@@ -48,6 +49,23 @@ const CartPage = () => {
           </button>
           </Link>
       </div>
+      {/* total and checkout section */}
+      <p>
+        {totalAmount == 0.00 ? 
+        <div className="empty-cart">
+            <i className="fa-solid fa-cart-arrow-down"></i>
+            <span>No items in Cart</span>
+        </div>
+         : <div className="subTotal-checkOut">
+            <p><span>Subtotal</span> ₹{totalAmount}</p>
+            <Button 
+            type='pay-smaller'
+            label={`Proceed with ${cart.count} items`}></Button>
+         </div>
+         }
+        </p>
+        
+        {/* list items section  */}
         {CART?.map((item)=>
         <div key={item.id} className='cart-page-items'>
             <div className="cart-page-img">
@@ -61,15 +79,7 @@ const CartPage = () => {
                 <span>₹{((item.price * 82)* item.quantity).toFixed(2)}</span>
             </div>
         </div>)}
-        <p>
-        {totalAmount == 0.00 ? 
-        <div className="empty-cart">
-            <i className="fa-solid fa-cart-arrow-down"></i>
-            <span>No items in Cart</span>
-        </div>
-         : "Total ₹" + totalAmount}
-        </p>
-        {totalAmount == 0.00 ? "" : <button>Check Out</button>}
+
     </div>
   )
 }
