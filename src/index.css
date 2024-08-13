@@ -373,6 +373,18 @@ ul{
     object-position: center;
     width: 100%;
 }
+.empty-cart{
+    /* border:2px solid #d3d6db; */
+    height: 200px;
+    width: 80vw;
+    margin: 0 auto;
+    color: #727882;
+    display: flex;
+    gap: 15px;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+}
 
 /* shimmer-effects */
 /* shimmer-shopping-page */

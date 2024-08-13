@@ -62,7 +62,12 @@ const CartPage = () => {
             </div>
         </div>)}
         <p>
-        {totalAmount == 0.00 ? "No items in Cart" : "Total ₹" + totalAmount}
+        {totalAmount == 0.00 ? 
+        <div className="empty-cart">
+            <i className="fa-solid fa-cart-arrow-down"></i>
+            <span>No items in Cart</span>
+        </div>
+         : "Total ₹" + totalAmount}
         </p>
         {totalAmount == 0.00 ? "" : <button>Check Out</button>}
     </div>
