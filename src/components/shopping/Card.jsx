@@ -17,7 +17,7 @@ const Card = ({id, image, title, category, rate, price, onClick}) => {
         <p><span className="card-points">Rating: </span>{rate}/5</p>
         <h4 className='card-price'>{cart.formatToINR(price * 82)}</h4>
         <div className='card-buttons'>
-          <button onClick={() => onClick()}>Add to Cart</button>
+          <button id="addToCartBtn" onClick={() => onClick()}>Add to Cart</button>
         </div>
       </div>
       

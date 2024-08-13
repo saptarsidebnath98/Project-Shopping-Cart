@@ -36,6 +36,7 @@ const CartPage = () => {
             cart.handleUpdatedQuantity(unqId, item.quantity - 1);
         }
     };
+    console.log(totalAmount);
         
   return (
     <div className='container cart-container'>
@@ -50,7 +51,7 @@ const CartPage = () => {
       </div>
       {/* total and checkout section */}
       <div>
-        {totalAmount == 0.00 ? 
+        {totalAmount == "₹0.00" ? 
         <div className="empty-cart">
             <i className="fa-solid fa-cart-arrow-down"></i>
             <span>No items in Cart</span>
@@ -78,9 +79,12 @@ const CartPage = () => {
                
                 <div className="cart-page-items-infos-lower">
                     <div className='cart-page-items-infos-lower-btnDiv'>
-                        <button onClick={() => handleDecrease(item.unqId)}>-</button>
+                        <button className='cartBtns'
+                        onClick={() => handleDecrease(item.unqId)}>-</button>
                         <p>{item.quantity}</p>
-                        <button onClick={() => handleIncrease(item.unqId)}>+</button>
+                        <button 
+                        className='cartBtns'
+                        onClick={() => handleIncrease(item.unqId)}>+</button>
                     </div>
                         <p>{cart.formatToINR(item.price * 82* item.quantity)}</p>
                 </div>

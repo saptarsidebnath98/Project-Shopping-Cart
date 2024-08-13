@@ -39,7 +39,6 @@ export default function CartContextProvider ({children}){
     currency: 'INR',
     minimumFractionDigits: 2,
     maximumFractionDigits: 2});
-
     return formatted;
     }
 

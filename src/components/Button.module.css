@@ -39,6 +39,7 @@
     composes: smaller;
     background-color: #be3144;
     color: #d3d6db;
+    padding-inline: 30px;
 }
 
 .pay-smaller:hover{
