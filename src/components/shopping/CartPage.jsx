@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { cartContext } from '../context/CartContext'
+import LinkButton from '../LinkButton';
+import { Link } from 'react-router-dom';
 
 const CartPage = () => {
 
@@ -21,22 +23,31 @@ const CartPage = () => {
 
     //Increase Item quantity func
     const handleIncrease = (unqId) => {
-        const newCart = CART.map((newCartItem) => {
-            return newCartItem.unqId === unqId ? {...newCartItem, quantity: newCartItem.quantity + 1} : newCartItem
-        });
-        setCART(newCart);
-    }
+        const item = CART.find(item => item.unqId === unqId);
+        if (item) {
+            cart.handleUpdatedQuantity(unqId, item.quantity + 1);
+        }
+    };
 
     //Decrease Item quantity func
     const handleDecrease = (unqId) => {
-        const newCart = CART.map((newCartItem) => {
-            return newCartItem.unqId === unqId ? {...newCartItem, quantity: newCartItem.quantity > 0 ? newCartItem.quantity - 1 : 0} : newCartItem
-        }).filter(item => item.quantity !== 0);
-        setCART(newCart);
-    }
+        const item = CART.find(item => item.unqId === unqId);
+        if (item) {
+            cart.handleUpdatedQuantity(unqId, item.quantity - 1);
+        }
+    };
         
   return (
     <div className='container cart-container'>
+        <div className="back-cart-div">
+        <LinkButton path="/shopping" label="go shopping" type="smaller"/>
+          <Link to="/cart">
+          <button className="cartBtn-div">
+          <i className="fa-solid fa-cart-shopping"></i>
+          <p>{cart.count}</p>
+          </button>
+          </Link>
+      </div>
         {CART?.map((item)=>
         <div key={item.id} className='cart-page-items'>
             <div className="cart-page-img">
@@ -53,7 +64,7 @@ const CartPage = () => {
         <p>
         {totalAmount == 0.00 ? "No items in Cart" : "Total ₹" + totalAmount}
         </p>
-        <button>Check Out</button>
+        {totalAmount == 0.00 ? "" : <button>Check Out</button>}
     </div>
   )
 }

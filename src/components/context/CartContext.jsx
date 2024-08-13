@@ -13,8 +13,17 @@ export default function CartContextProvider ({children}){
         console.log(cartItems);
     }
 
+    function handleUpdatedQuantity(unqId, quantity){
+        setCartItems((prevItems) => prevItems
+                .map(item => item.unqId === unqId ? { ...item, quantity: quantity } : item)
+                .filter(item => item.quantity > 0)
+        );
+    }
 
-    return <cartContext.Provider value={{cartItems, handleAddItems}}>
+    const count = cartItems.map((item) => item.quantity).reduce((tot, curr) => tot + curr, 0)
+    
+
+    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity, count}}>
         {children}
     </cartContext.Provider>
 

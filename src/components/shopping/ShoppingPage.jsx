@@ -2,7 +2,7 @@ import useFetchData from "../Custom hook/useFetchData";
 import LinkButton from "../LinkButton";
 import Card from "./Card";
 import ShimmerShoppingPage from "../shimmer effect/ShimmerShoppingPage";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,7 @@ const ShoppingPage = () => {
           <Link to="/cart">
           <button className="cartBtn-div">
           <i className="fa-solid fa-cart-shopping"></i>
-          <p>{cart.cartItems.length}</p>
+          <p>{cart.count}</p>
           </button>
           </Link>
       </div>
