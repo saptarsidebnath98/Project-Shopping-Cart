@@ -32,8 +32,18 @@ export default function CartContextProvider ({children}){
     //cart items changes with the quantity of items
     const count = cartItems.map((item) => item.quantity).reduce((tot, curr) => tot + curr, 0)
     
+    //format amount in INR
+    function formatToINR(amount) {
+   const formatted =  amount.toLocaleString('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2});
 
-    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity, count}}>
+    return formatted;
+    }
+
+    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity, count, formatToINR}}>
         {children}
     </cartContext.Provider>
 
