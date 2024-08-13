@@ -5,7 +5,6 @@ import ShimmerShoppingPage from "../shimmer effect/ShimmerShoppingPage";
 import { useContext } from "react";
 import { cartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import ErrorPage from "../error/ErrorPage";
 
 const ShoppingPage = () => {
   // data fetching process
@@ -35,7 +34,7 @@ const ShoppingPage = () => {
       <div className="shopping-cards-container">
         {data.map((item)=> 
         <Card 
-        key={item.id} 
+        key={item.unqId} 
         id={item.id} 
         image={item.image} 
         title={item.title} 

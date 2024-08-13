@@ -350,13 +350,17 @@ ul{
 }
 
 /* Cart-Page */
+.cart-container{
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
 .cart-page-items{
-    /* height: 200px; */
     overflow: hidden;
     display: flex;
-    /* text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 400px; */
+    
 }
 .cart-page-img{
     height: 50px;
