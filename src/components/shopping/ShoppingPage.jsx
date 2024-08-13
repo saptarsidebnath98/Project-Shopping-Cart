@@ -5,6 +5,7 @@ import ShimmerShoppingPage from "../shimmer effect/ShimmerShoppingPage";
 import { useContext } from "react";
 import { cartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import ErrorPage from "../error/ErrorPage";
 
 const ShoppingPage = () => {
   // data fetching process
@@ -17,7 +18,7 @@ const ShoppingPage = () => {
   // console.log(data? data[0] : "no data");
 
   if(loading) return <ShimmerShoppingPage/>
-  if(error) return <div>{error}</div>
+  if (error) return <div>Error: {error.message || "Something went wrong"}</div>;
 
   return (
     <section className="shopping">
@@ -27,7 +28,7 @@ const ShoppingPage = () => {
           <Link to="/cart">
           <button className="cartBtn-div">
           <i className="fa-solid fa-cart-shopping"></i>
-          <p>{cart.totalItems.length}</p>
+          <p>{cart.cartItems.length}</p>
           </button>
           </Link>
       </div>

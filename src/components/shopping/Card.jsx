@@ -10,9 +10,9 @@ const Card = ({id, image, title, category, rate, price, onClick}) => {
         <h3 className='card-details-title'>{title}</h3>
         <p><span className="card-points">Category: </span>{category}</p>
         <p><span className="card-points">Rating: </span>{rate}/5</p>
-        <h4 className='card-price'>${price}</h4>
+        <h4 className='card-price'>₹{(price * 82).toFixed(2)}</h4>
         <div className='card-buttons'>
-          <button onClick={onClick}>Add to Cart</button>
+          <button onClick={() => onClick()}>Add to Cart</button>
         </div>
       </div>
       
