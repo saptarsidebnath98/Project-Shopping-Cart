@@ -41,7 +41,7 @@ const CartPage = () => {
   return (
     <div className='container cart-container'>
         <div className="back-cart-div">
-        <LinkButton path="/shopping" label="go shopping" type="smaller"/>
+        <LinkButton path="/shopping" label={CART.length === 0 ?`Start Shopping` : `Keep Shopping`} type="smaller"/>
           <Link to="/cart">
           <button className="cartBtn-div">
           <i className="fa-solid fa-cart-shopping"></i>
@@ -75,6 +75,10 @@ const CartPage = () => {
             <div className="cart-page-items-infos">
                 <div className="cart-page-items-infos-upper">
                 <span>{item.title.length>15 ? item.title.slice(0, 15)+ "..." : item.title}</span> 
+                <button className="cart-item-delete-btn" 
+                onClick={()=> cart.handleDelete(item.unqId)}>
+                    <i className="fa-solid fa-trash-can"></i>
+                </button>
                 </div>
                
                 <div className="cart-page-items-infos-lower">

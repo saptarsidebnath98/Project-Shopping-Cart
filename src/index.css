@@ -411,10 +411,12 @@ ul{
     gap: 10px;
 }
 .cart-page-items-infos-upper{
-    /* font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 2px; */
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .cart-page-items-infos-lower{
     display: flex;
     justify-content: space-between;
@@ -427,7 +429,7 @@ ul{
     align-items: center;
     gap: 10px;
 }
-.cartBtns{
+.cartBtns, .cart-item-delete-btn{
     background-color: #be3144;
     border: none;
     border-radius: 2px;
@@ -437,6 +439,14 @@ ul{
     text-align: center;
     font-weight: 600;
     color: #d3d6db;
+}
+.cart-item-delete-btn{
+    background-color: #727882;
+    color: #be3144;
+    padding: 0%;
+}
+.cart-item-delete-btn:active, .cartBtns:active{
+    background-color: #727882;
 }
 .empty-cart{
     /* border:2px solid #d3d6db; */

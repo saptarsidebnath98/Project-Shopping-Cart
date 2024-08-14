@@ -5,7 +5,7 @@ const Button = ({type="primary", label="Button", action}) => {
   return (
     <button 
     className={styles[type]}
-    onClick={action}>
+    onClick={()=>action}>
       {label}
     </button>
   )

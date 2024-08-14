@@ -29,6 +29,11 @@ export default function CartContextProvider ({children}){
         );
     }
 
+    function handleDelete(unqId){
+        setCartItems((prevItems) => prevItems
+        .filter(item => item.unqId !== unqId))
+    }
+
     //cart items changes with the quantity of items
     const count = cartItems.map((item) => item.quantity).reduce((tot, curr) => tot + curr, 0)
     
@@ -42,7 +47,7 @@ export default function CartContextProvider ({children}){
     return formatted;
     }
 
-    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity, count, formatToINR}}>
+    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity,handleDelete, count, formatToINR}}>
         {children}
     </cartContext.Provider>
 
