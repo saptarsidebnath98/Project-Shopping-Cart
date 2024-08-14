@@ -32,7 +32,7 @@ const router = createHashRouter([
         element: <ShoppingPage/>,
       },
       {
-        path: "/productInfo",
+        path: "/productInfo/:id",
         element: <ProductInfo/>,
       },
       {

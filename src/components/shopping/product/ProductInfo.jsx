@@ -1,11 +1,25 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import LinkButton from "../../LinkButton"
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { cartContext } from "../../context/CartContext";
+import useFetchData from "../../Custom hook/useFetchData";
 
 const ProductInfo = () => {
 
+    const { id } = useParams();
     const cart =  useContext(cartContext);
+    
+    const url = `https://fakestoreapi.com/products/${id}`;
+    const {data, loading, error} = useFetchData({url});
+    console.log(data);
+
+    
+    
+    if(loading) return <div>Loading...</div>
+    if(error) return <div>{error}</div>
+    
+    const {image, title, description, category, price, rating} = data;
+    
 
   return (
     <div className="container">
@@ -20,13 +34,14 @@ const ProductInfo = () => {
       </div>
       <div className="product-container">
             <div className="product-img-div">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
+                <img src={image} alt={id} />
             </div>
             <div className="product-details-div">
-                <div className="product-details-items">Title</div>
-                <div className="product-details-items">Category</div>
-                <div className="product-details-items">Rating</div>
-                <div className="product-details-items">Price</div>
+                <div className="product-details-items">Title <span className="p-d-i-infos">{title}</span></div>
+                <div className="product-details-items">Category <span className="p-d-i-infos">{category}</span></div>
+                <div className="product-details-items">Description <span className="p-d-i-infos">{description}</span></div>
+                <div className="product-details-items">Rating <span className="p-d-i-infos">{rating.rate}/5</span></div>
+                <div className="product-details-items">Price <span className="p-d-i-infos">{cart.formatToINR(price * 82)}</span></div>
                 <button>Add to Cart</button>
                 <p>(Go to cart to increase/ decrease item numbers)</p>
             </div>
