@@ -305,7 +305,7 @@ ul{
 /* Card */
 .card{
     max-width: 300px;
-    max-height: 550px;
+    max-height: 600px;
     background-color: #be3144;
     border-radius: 5px;
 }
@@ -326,7 +326,7 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
     font-size: 0.8rem;
     color: #d3d6db;
 }
@@ -346,7 +346,13 @@ ul{
     justify-content: center;
     align-items: flex-end;
 }
-#addToCartBtn{
+a.view-product{
+    color: #fd6c7f;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+.addToCartBtn{
     color: #d3d6db;
     background-color: #303841;
     padding: 5px 10px;
@@ -362,7 +368,20 @@ ul{
     font-size: 1.5rem;
     color: #fff;
 }
-
+/* Product-Page */
+.product-container{
+    display: flex;
+}
+.product-img-div{
+    width: 200px;
+    overflow: hidden;
+}
+.product-img-div>img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    
+}
 /* Cart-Page */
 .cart-container{
     padding: 50px 0px;

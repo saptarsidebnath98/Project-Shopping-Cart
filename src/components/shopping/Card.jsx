@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { cartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const Card = ({id, image, title, category, rate, price, onClick}) => {
 
@@ -15,12 +16,12 @@ const Card = ({id, image, title, category, rate, price, onClick}) => {
         <h3 className='card-details-title'>{title}</h3>
         <p><span className="card-points">Category: </span>{category}</p>
         <p><span className="card-points">Rating: </span>{rate}/5</p>
+        <Link to={`/productInfo?id=${id}`}className='view-product'>View Product</Link>
         <h4 className='card-price'>{cart.formatToINR(price * 82)}</h4>
         <div className='card-buttons'>
-          <button id="addToCartBtn" onClick={() => onClick()}>Add to Cart</button>
+          <button className="addToCartBtn" onClick={() => onClick()}>Add to Cart</button>
         </div>
       </div>
-      
     </div>
   )
 }

@@ -9,6 +9,7 @@ import ErrorPage from './components/error/ErrorPage.jsx'
 import CartContextProvider from './components/context/CartContext.jsx'
 import CartPage from './components/shopping/CartPage.jsx'
 import BillPage from './components/bill/BillPage.jsx'
+import ProductInfo from './components/shopping/product/ProductInfo.jsx'
 import './index.css'
 
 const router = createHashRouter([
@@ -29,6 +30,10 @@ const router = createHashRouter([
       {
         path: "/shopping",
         element: <ShoppingPage/>,
+      },
+      {
+        path: "/productInfo",
+        element: <ProductInfo/>,
       },
       {
         path: "/cart",
