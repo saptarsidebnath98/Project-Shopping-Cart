@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -478,6 +478,64 @@ ul{
 .subTotal-checkOut>p>span{
     color: #727882;
 }
+/* Bill Page */
+.bill-container{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bill-container>button{
+    align-self: flex-start;
+}
+.bill-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+    font-family: monospace;
+    background-color: #d3d6db;
+    border-radius: 5px;
+    padding: 10px;
+    user-select: none;
+}
+.bill-div-Items{
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; */
+}
+.bill-div-Items:last-child{
+    border: none;
+}
+#bill-total-Amount{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* Modal */
+.modal {
+    /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 10rem; /* Could be more or less, depending on screen size */
+  }
 
 /* shimmer-effects */
 /* shimmer-shopping-page */

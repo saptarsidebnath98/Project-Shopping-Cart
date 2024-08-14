@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react'
 import { cartContext } from '../context/CartContext'
 import LinkButton from '../LinkButton';
 import { Link } from 'react-router-dom';
-import Button from '../Button';
 
 const CartPage = () => {
 
@@ -36,7 +35,6 @@ const CartPage = () => {
             cart.handleUpdatedQuantity(unqId, item.quantity - 1);
         }
     };
-    console.log(totalAmount);
         
   return (
     <div className='container cart-container'>
@@ -57,10 +55,11 @@ const CartPage = () => {
             <span>No items in Cart</span>
         </div>
          : <div className="subTotal-checkOut">
-            <p><span>Subtotal</span> {totalAmount}</p>
-            <Button 
-            type='pay-smaller'
-            label={`Proceed with ${cart.count} items`}></Button>
+            <p><span>Subtotal</span> {cart.formatToINR(cart.totalAmount)}</p>
+            <LinkButton 
+            path="/billing" 
+            label={`Proceed with ${cart.count} items`} 
+            type='pay-smaller'/>
          </div>
          }
         </div>
@@ -94,9 +93,7 @@ const CartPage = () => {
                 </div>
             </div>
         </div>)}
-
         </div>
-
     </div>
   )
 }

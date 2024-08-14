@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
-export const cartContext = createContext({
-});
+export const cartContext = createContext({});
 
+// eslint-disable-next-line react/prop-types
 export default function CartContextProvider ({children}){
 
     const [cartItems, setCartItems] = useState(()=> {
@@ -33,6 +33,10 @@ export default function CartContextProvider ({children}){
         setCartItems((prevItems) => prevItems
         .filter(item => item.unqId !== unqId))
     }
+    //total Amount Calculation
+    const totalAmount = cartItems
+        .map((item) => (item.price * 82) * item.quantity)
+        .reduce((total, currVal) => total + Number(currVal), 0);
 
     //cart items changes with the quantity of items
     const count = cartItems.map((item) => item.quantity).reduce((tot, curr) => tot + curr, 0)
@@ -47,7 +51,7 @@ export default function CartContextProvider ({children}){
     return formatted;
     }
 
-    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity,handleDelete, count, formatToINR}}>
+    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity,handleDelete, count, formatToINR, totalAmount}}>
         {children}
     </cartContext.Provider>
 
