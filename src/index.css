@@ -653,14 +653,38 @@ a.view-product{
 .shimmer-product-mainDiv{
     width: 100%;
     height: 70vh;
-    background-color: #727882;
     margin: 0 auto;
+    border-radius: 10px;
+    border: 5px solid #727882;
 
     display: flex;
-
+    flex-direction: row;
 }
 .shimmer-product-upper{
     width: 50%;
+    background-color: #727882;
+}
+.shimmer-product-lower{
+    width: 50%;
+}
+.shimmer-productInfo-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 20px;
+}
+.shimmer-productInfo-items{
+    height: 1.5rem;
+    width: 80%;
+    background-color: #727882;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.shimmer-productInfo-items:first-child{
+    width: 50%;
+    margin-left: 0px;
 }
 
 @media (max-width: 600px){
