@@ -21,7 +21,7 @@ const ProductInfo = () => {
 
   return (
     <div className="container">
-        <div className="back-cart-div">
+        <div className="back-cart-div" id="productInfo-back-cart-div">
             <LinkButton path="/shopping" label="back" type="smaller"/>
             <Link to="/cart">
             <button className="cartBtn-div">
@@ -35,12 +35,13 @@ const ProductInfo = () => {
                 <img src={image} alt={id} />
             </div>
             <div className="product-details-div">
-                <div className="product-details-items">Title <span className="p-d-i-infos">{title}</span></div>
+                <div className="product-details-items"><span className="p-d-i-infos">{title}</span></div>
                 <div className="product-details-items">Category <span className="p-d-i-infos">{category}</span></div>
                 <div className="product-details-items">Description <span className="p-d-i-infos">{description}</span></div>
                 <div className="product-details-items">Rating <span className="p-d-i-infos">{rating.rate}/5</span></div>
                 <div className="product-details-items">Price <span className="p-d-i-infos">{cart.formatToINR(price * 82)}</span></div>
-                <button className="addToCart">Add to Cart</button>
+                <button className="product-addToCartBtn" onClick={()=>cart.handleAddItems(data)}
+                >Add to Cart</button>
                 <p>(Go to cart to increase/ decrease item numbers)</p>
             </div>
         </div>
