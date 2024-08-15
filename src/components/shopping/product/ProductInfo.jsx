@@ -3,6 +3,7 @@ import LinkButton from "../../LinkButton"
 import { useContext} from "react";
 import { cartContext } from "../../context/CartContext";
 import useFetchData from "../../Custom hook/useFetchData";
+import ShimmerProductInfo from "../../shimmer effect/ShimmerProductInfo";
 
 const ProductInfo = () => {
 
@@ -13,7 +14,7 @@ const ProductInfo = () => {
     const url = `https://fakestoreapi.com/products/${id}`;
     const {data, loading, error} = useFetchData({url});
 
-    if(loading) return <div>Loading...</div>
+    if(loading) return <ShimmerProductInfo/>
     if(error) return <div>{error.message || "Something went wrong"}</div>
     
     const {image, title, description, category, price, rating} = data;

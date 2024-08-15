@@ -15,7 +15,7 @@ const useFetchData = ({url}) => {
         })
         .then(resData => setData(resData))
         .catch(err => setError(err))
-        .finally(()=> setLoading(false))
+        .finally(()=> setLoading(true))
       }, [url])
   return {data, loading, error}
 }
