@@ -51,7 +51,7 @@ export default function CartContextProvider ({children}){
     return formatted;
     }
 
-    return <cartContext.Provider value={{cartItems, handleAddItems,  handleUpdatedQuantity,handleDelete, count, formatToINR, totalAmount}}>
+    return <cartContext.Provider value={{cartItems, setCartItems, handleAddItems,  handleUpdatedQuantity,handleDelete, count, formatToINR, totalAmount}}>
         {children}
     </cartContext.Provider>
 

@@ -547,15 +547,25 @@ a.view-product{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 .bill-container>button{
     align-self: flex-start;
 }
+.bill-userForm-div{
+   display: flex;
+   flex-direction: row;
+   align-items: stretch;
+   justify-content: center;
+   gap: 30px;
+}
 .bill-div{
+    width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     font-family: monospace;
     background-color: #d3d6db;
     border-radius: 5px;
@@ -575,6 +585,29 @@ a.view-product{
 #bill-total-Amount{
     font-weight: 800;
     font-size: 1.5rem;
+}
+/* user-Info-form */
+.user-Info-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.user-Info-form>h3{
+    color: #be3144;
+}
+.user-Info-form>label{
+    /* font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 3px; */
+    color: #fff;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.user-Info-form>input, .user-Info-form>textarea{
+    background-color: #d3d6db;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
 }
 
 /* Modal */
