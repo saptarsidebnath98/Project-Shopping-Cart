@@ -13,9 +13,15 @@ const Modal = ({totalAmount, setShowModal}) => {
   //extracting data from CartContext
   const {setCartItems} = useContext(cartContext);
 
+  //handling modal display
   const handleSubmit= () => {
     setShowModal(false);
     setCartItems([]);
+  }
+
+  function capitalizeStr (str){
+    const newStr = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    return newStr;
   }
 
   return (
@@ -25,7 +31,7 @@ const Modal = ({totalAmount, setShowModal}) => {
           <button onClick={handleSubmit}>X</button>
         </Link>
         <p>Order Placed successfully</p>
-        <h3>{`${fName} ${lName}`}</h3>
+        <h3>{capitalizeStr(fName)+ " " + capitalizeStr(lName)}</h3>
         <p>Thank You for your <span>One Stop Shopping</span></p>
       </div>
     </div>

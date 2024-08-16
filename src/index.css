@@ -611,6 +611,10 @@ a.view-product{
     padding: 5px;
     font-family: monospace;
 }
+.user-Info-form>input:focus, .user-Info-form>textarea:focus{
+    border: 2px solid #be3144;
+    outline: none;
+}
 .check-out-btn{
     background-color: #be3144;
     cursor: pointer;
