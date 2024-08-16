@@ -10,7 +10,7 @@ const Card = ({id, image, title, category, rate, price, onClick}) => {
   return (
     <div className="card">
       <div className='card-img-div'>
-        <img className="card-img" src={image} alt={id} />
+        <img className="card-img" src={image} alt={id} loading="lazy"/>
       </div>
       <div className='card-details-div'>
         <h3 className='card-details-title'>{title}</h3>

@@ -19,7 +19,7 @@ const Header = () => {
             <div className="header-img-div">
               {images.map((image, index)=> 
               <Link to="/shopping" key={index}>
-              <img src={`./images/${image}.png`} alt={`${image} image`} className="header-img-items" />
+              <img src={`./images/${image}.png`} alt={`${image} image`} className="header-img-items" loading="lazy"/>
               </Link>)}
             </div>
         </div>
