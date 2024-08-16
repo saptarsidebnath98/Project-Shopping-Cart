@@ -841,7 +841,7 @@ a.view-product{
     align-self: center;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     /* .container{
         width: 95%;
         margin: 0 auto;
