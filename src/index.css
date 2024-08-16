@@ -393,7 +393,7 @@ a.view-product{
     object-fit: cover;
     object-position: center;
     width: 100%; 
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
 }
 .product-details-div{
     width: 50%;
@@ -597,8 +597,6 @@ a.view-product{
     color: #be3144;
 }
 .user-Info-form>label{
-    /* font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 3px; */
     color: #fff;
     font-weight: 300;
     margin-top: 10px;
@@ -647,11 +645,80 @@ a.view-product{
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 10rem; /* Could be more or less, depending on screen size */
+    background-color: #be3144;
+    margin: 15% auto; 
+    padding: 30px;
+    color: #d3d6db;
+    
+    width: 20em; 
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    user-select: none;
+  }
+  .modal-content>a{
+   width: 100%;
+   position: relative;
+  }
+  .modal-content>a>button{
+    justify-self: flex-end;
+    position: absolute;
+    right: 0px;
+
+    background-color: #be3144;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    color: #d3d6db;
+    font-size: 1.1rem;
+  }
+  
+  .thank-you-img-div{
+    width: 30%;
+    margin-top: 20px;
+  }
+  .thank-you-img-div>img{
+    width: 100%;
+  }
+  .order-place-div{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #303841;
+  }
+  .order-place-div>span{
+    /* font-size: 1.1rem; */
+    text-transform: capitalize;
+    font-weight: 900;
+  }
+  .modal-text{
+        font-size: 0.9rem;
+  }
+  #thank-you-text{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: #fd6c7f;
+  }
+  #one-stop-text{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 3px;
+    color: #303841;
+    font-weight: 600;
+    border: 1px solid #303841;
+    padding: 0px 2px;
+  }
+  #stop{
+    color: #d3d6db;
+    
   }
 
 /* shimmer-effects */
@@ -841,6 +908,9 @@ a.view-product{
     .product-img-div{
         width: 100%;
     }
+    .product-img-div>img{
+        border-radius: 10px 10px 0px 0px;
+    }
     .product-details-div{
         width: 100%;
     }
@@ -866,7 +936,15 @@ a.view-product{
     .user-Info-form{
         width: 100%;
     }
-
+    /* MODAL */
+    .modal-content{
+        width: 15em;
+        font-size: 1rem;
+        margin: 50% auto;
+    }
+    .thank-you-img-div{
+        width: 50%;
+    }
     /* shimmer-shopping-page */
     .shimmer-shopping{
         padding: 50px 0px;

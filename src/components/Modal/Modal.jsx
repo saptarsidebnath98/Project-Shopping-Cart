@@ -25,16 +25,31 @@ const Modal = ({totalAmount, setShowModal}) => {
   }
 
   return (
-    <div id="myModal" className="modal">
+    <Link to="/home">
+    <div id="myModal" className="modal" onClick={handleSubmit}>
       <div className="modal-content">
         <Link to="/home">
-          <button onClick={handleSubmit}>X</button>
+          <button onClick={handleSubmit}>
+            <i className="fa-solid fa-xmark"></i>
+          </button>
         </Link>
-        <p>Order Placed successfully</p>
+        <div className="thank-you-img-div">
+          <img src="images/illustration-thank-you.svg" alt="thank you image"/>
+        </div>
+        {/* <img src="images/icon-star.svg" alt="" /> */}
+        <p className="order-place-div modal-text">
+          <i className="fa-solid fa-truck-fast"></i>
+          <span>order placed successfully</span>
+          <i className="fa-solid fa-truck-fast"></i>
+        </p>
         <h3>{capitalizeStr(fName)+ " " + capitalizeStr(lName)}</h3>
-        <p>Thank You for your <span>One Stop Shopping</span></p>
+        <p  className="modal-text"
+        id="thank-you-text">Thank You for your </p>
+        <p className="modal-text"
+        id="one-stop-text">One <span id="stop">Stop</span> Shopping</p>
       </div>
     </div>
+    </Link>
   )
 }
 
