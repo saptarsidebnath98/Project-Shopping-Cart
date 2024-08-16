@@ -35,7 +35,7 @@ const UserInfoForm = ({setShowModal}) => {
             <input type="email" id="emailId" name="emailId" required/>
             <label htmlFor="address">Address:</label>
             <textarea id="address" name="address" required></textarea>
-            <button>Check out & place order</button>
+            <button className="check-out-btn">Check out</button>
         </form>
   )
 }
