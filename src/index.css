@@ -408,10 +408,15 @@ a.view-product{
     display: flex;
     flex-direction: column;
 }
+.product-details-items:first-child>span{
+    color: #be3144;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 .p-d-i-infos{
     font-family: "Josefin Sans", sans-serif;
     letter-spacing: 0px;
-    color: #fff;
+    color: #d3d6db;
     margin-top: 5px;
     font-weight: 400;
     line-height: 1.2rem;
