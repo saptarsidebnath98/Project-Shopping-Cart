@@ -608,7 +608,7 @@ a.view-product{
     background-color: #d3d6db;
     border: none;
     border-radius: 5px;
-    padding: 2px 5px;
+    padding: 5px;
     font-family: monospace;
 }
 .check-out-btn{
@@ -848,6 +848,19 @@ a.view-product{
     .subTotal-checkOut{
         margin-top: 30px;
         margin-bottom: 20px;
+    }
+    /* Billing-Page */
+    .bill-container{
+        padding-bottom: 100px;
+    }
+    .bill-userForm-div{
+        flex-direction: column;
+    }
+    .bill-div{
+        width: 100%;
+    }
+    .user-Info-form{
+        width: 100%;
     }
 
     /* shimmer-shopping-page */
