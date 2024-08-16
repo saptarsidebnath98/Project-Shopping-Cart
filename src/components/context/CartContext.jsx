@@ -18,8 +18,6 @@ export default function CartContextProvider ({children}){
     //button onClick function to handle quantity
     function handleAddItems (item) {
         setCartItems((prevItems)=> [...prevItems, {...item, quantity: 1, unqId: crypto.randomUUID()}]);
-
-        console.log(cartItems);
     }
 
     function handleUpdatedQuantity(unqId, quantity){

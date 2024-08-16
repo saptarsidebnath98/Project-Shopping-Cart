@@ -25,7 +25,6 @@ const Modal = ({totalAmount, setShowModal}) => {
   }
 
   return (
-    <Link to="/home">
     <div id="myModal" className="modal" onClick={handleSubmit}>
       <div className="modal-content">
         <Link to="/home">
@@ -49,7 +48,6 @@ const Modal = ({totalAmount, setShowModal}) => {
         id="one-stop-text">One <span id="stop">Stop</span> Shopping</p>
       </div>
     </div>
-    </Link>
   )
 }
 

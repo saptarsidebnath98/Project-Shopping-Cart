@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -17,7 +18,9 @@ const Header = () => {
             <p className="category-text">Categories</p>
             <div className="header-img-div">
               {images.map((image, index)=> 
-              <img key={index} src={`./images/${image}.png`} alt={`${image} image`} className="header-img-items" />)}
+              <Link to="/shopping" key={index}>
+              <img src={`./images/${image}.png`} alt={`${image} image`} className="header-img-items" />
+              </Link>)}
             </div>
         </div>
       </div>

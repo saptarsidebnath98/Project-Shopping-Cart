@@ -34,7 +34,7 @@ const ShoppingPage = () => {
       <div className="shopping-cards-container">
         {data.map((item)=> 
         <Card 
-        key={item.unqId} 
+        key={item.id} 
         id={item.id} 
         image={item.image} 
         title={item.title} 
