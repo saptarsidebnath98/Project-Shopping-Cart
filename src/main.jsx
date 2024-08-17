@@ -4,7 +4,7 @@ import {  createHashRouter, RouterProvider,} from "react-router-dom"
 import App from './App.jsx'
 import Contacts from './components/contacts/ContactsPage.jsx'
 import ShoppingPage from './components/shopping/ShoppingPage.jsx'
-import Home from './components/HomePage.jsx'
+import Home from './components/home/HomePage.jsx'
 import ErrorPage from './components/error/ErrorPage.jsx'
 import CartContextProvider from './components/context/CartContext.jsx'
 import CartPage from './components/shopping/CartPage.jsx'
