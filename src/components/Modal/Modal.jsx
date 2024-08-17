@@ -1,10 +1,13 @@
 import { useContext } from "react"
 import { userContext } from "../context/UserContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { cartContext } from "../context/CartContext";
+import { createPortal } from "react-dom";
 
 
-const Modal = ({totalAmount, setShowModal}) => {
+const Modal = ({setShowModal}) => {
+  //using navigate
+  const navigate = useNavigate();
 
   //extracting data from UserContext
   const {userData} = useContext(userContext);
@@ -13,10 +16,18 @@ const Modal = ({totalAmount, setShowModal}) => {
   //extracting data from CartContext
   const {setCartItems} = useContext(cartContext);
 
-  //handling modal display
+  //handling show modal
   const handleSubmit= () => {
     setShowModal(false);
     setCartItems([]);
+    navigate("/home");
+  }
+
+  //handle outside click of modal
+  const handleModalClick = (e) => {
+    if(e.target.id === "myModal"){
+      handleSubmit();
+    }
   }
 
   function capitalizeStr (str){
@@ -24,9 +35,9 @@ const Modal = ({totalAmount, setShowModal}) => {
     return newStr;
   }
 
-  return (
-    <div id="myModal" className="modal" onClick={handleSubmit}>
-      <div className="modal-content">
+  return createPortal(
+    <div id="myModal" className="modal" onClick={handleModalClick}>
+      <div className="modal-content" onClick={(e)=> e.stopPropagation()}>
         <Link to="/home">
           <button onClick={handleSubmit}>
             <i className="fa-solid fa-xmark"></i>
@@ -41,13 +52,14 @@ const Modal = ({totalAmount, setShowModal}) => {
           <span>order placed successfully</span>
           <i className="fa-solid fa-truck-fast"></i>
         </p>
-        <h3>{capitalizeStr(fName)+ " " + capitalizeStr(lName)}</h3>
+        <h3 id="modal-userName">{capitalizeStr(fName)+ " " + capitalizeStr(lName)}</h3>
         <p  className="modal-text"
         id="thank-you-text">Thank You for your </p>
         <p className="modal-text"
         id="one-stop-text">One <span id="stop">Stop</span> Shopping</p>
       </div>
-    </div>
+    </div>,
+     document.getElementById('modal-root')
   )
 }
 
