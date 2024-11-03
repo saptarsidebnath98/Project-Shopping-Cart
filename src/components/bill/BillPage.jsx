@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import Button from "../Button"
+import Button from "../Buttons/Button"
 import { cartContext } from "../context/CartContext"
 import UserInfoForm from "./UserInfoForm"
 import Modal from "../Modal/Modal"

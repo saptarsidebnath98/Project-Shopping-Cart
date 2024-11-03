@@ -4,7 +4,9 @@ import imagemin from 'vite-plugin-imagemin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/Project-Shopping-Cart/",
+  base: process.env.NODE_ENV === 'production'
+  ? '/Project-Shopping-Cart/' // GitHub Pages base path
+  : '/', // Netlify and local development base path
   plugins: [
     react(),
     imagemin({

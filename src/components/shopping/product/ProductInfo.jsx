@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom"
-import LinkButton from "../../LinkButton"
+import LinkButton from "../../Buttons/LinkButton";
 import { useContext} from "react";
 import { cartContext } from "../../context/CartContext";
 import useFetchData from "../../Custom hook/useFetchData";

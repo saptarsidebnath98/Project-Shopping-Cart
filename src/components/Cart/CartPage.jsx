@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { cartContext } from '../context/CartContext'
-import LinkButton from '../LinkButton';
+import LinkButton from '../Buttons/LinkButton';
 import { Link } from 'react-router-dom';
 
 const CartPage = () => {

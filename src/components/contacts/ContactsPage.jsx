@@ -1,4 +1,4 @@
-import LinkButton from "../LinkButton";
+import LinkButton from "../Buttons/LinkButton"
 
 const Contacts = () => {
   return (

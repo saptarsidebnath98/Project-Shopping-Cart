@@ -1,5 +1,5 @@
 import useFetchData from "../Custom hook/useFetchData";
-import LinkButton from "../LinkButton";
+import LinkButton from "../Buttons/LinkButton";
 import Card from "./Card";
 import ShimmerShoppingPage from "../shimmer effect/ShimmerShoppingPage";
 import { useContext } from "react";

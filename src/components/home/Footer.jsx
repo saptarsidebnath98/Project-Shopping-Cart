@@ -13,7 +13,6 @@ const Footer = () => {
                     Github
                 </a>
             </li>
-            
         </ul>
       </div>
     </footer>
