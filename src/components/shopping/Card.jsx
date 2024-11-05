@@ -26,6 +26,7 @@ const Card = ({id, image, title, category, rate, price, onClick}) => {
   )
 }
 
+//Prop Validation
 Card.propTypes = {
   id : PropTypes.number,
   image: PropTypes.string,

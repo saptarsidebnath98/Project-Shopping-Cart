@@ -4,16 +4,12 @@ import { lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import {  createHashRouter, RouterProvider,} from "react-router-dom"
 import App from './App.jsx'
-// import Contacts from './components/contacts/ContactsPage.jsx'
-// import ShoppingPage from './components/shopping/ShoppingPage.jsx'
 import Home from './components/home/HomePage.jsx'
 import ErrorPage from './components/error/ErrorPage.jsx'
 import CartContextProvider from './components/context/CartContext.jsx'
-// import CartPage from './components/shopping/CartPage.jsx'
-// import BillPage from './components/bill/BillPage.jsx'
-// import ProductInfo from './components/shopping/product/ProductInfo.jsx'
 import './index.css'
 
+//applying Lazy Loading
 const ShoppingPage = lazy(()=> import('./components/shopping/ShoppingPage.jsx'));
 const Contacts = lazy(()=> import('./components/contacts/ContactsPage.jsx'));
 const CartPage = lazy(()=> import('./components/Cart/CartPage.jsx'));
@@ -57,9 +53,7 @@ const router = createHashRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
   <CartContextProvider>
     <RouterProvider router={router} />
   </CartContextProvider>
-  // </StrictMode>,
 )
